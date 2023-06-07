@@ -1,0 +1,14 @@
+.section {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 50%;
+}
+
+.section iframe {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  border: none;
+  width: 80%;
+  height: 90%;
+}

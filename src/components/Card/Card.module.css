@@ -1,0 +1,19 @@
+.card {
+  padding: 0 0 1em 0;
+  margin-top: 0.5em;
+  width: 28.2rem;
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  padding: 0 1em;
+}
+
+.card .icons {
+  margin: auto;
+  font-size: 2rem;
+  cursor: pointer;
+}

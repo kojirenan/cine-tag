@@ -6,8 +6,10 @@ export default defineConfig({
   resolve: {
     alias: {
       components: '/src/components',
-      page: '/src/page',
+      pages: '/src/pages',
       assets: '/src/assets',
+      json: '/src/json',
+      contexts: '/src/contexts',
     },
   },
 });
