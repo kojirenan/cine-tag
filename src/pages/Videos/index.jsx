@@ -1,10 +1,20 @@
 import { useParams } from 'react-router-dom';
 import styles from './Videos.module.css';
-import videos from 'json/db.json';
+import { useEffect, useState } from 'react';
 
 function Videos() {
+  const [video, setVideo] = useState([]);
   const params = useParams();
-  const video = videos.find((video) => video.id === Number(params.id));
+
+  useEffect(() => {
+    fetch(
+      `https://my-json-server.typicode.com/kojirenan/api-video/videos?id=${params.id}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setVideo(...data);
+      });
+  }, []);
 
   return (
     <section className={styles.section}>

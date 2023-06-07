@@ -1,9 +1,19 @@
 import Card from 'components/Card';
 import Title from 'components/Title';
-import videos from 'json/db.json';
 import styles from './Home.module.css';
+import { useEffect, useState } from 'react';
 
 function Home() {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetch('https://my-json-server.typicode.com/kojirenan/api-video/videos')
+      .then((resp) => resp.json())
+      .then((data) => {
+        setVideos(data);
+      });
+  }, []);
+
   return (
     <>
       <Title>
